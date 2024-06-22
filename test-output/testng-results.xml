@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-06-22T23:12:43 IST" name="Default suite" finished-at="2024-06-22T23:13:26 IST" duration-ms="42660">
+    <groups>
+    </groups>
+    <test started-at="2024-06-22T23:12:43 IST" name="Default test" finished-at="2024-06-22T23:13:26 IST" duration-ms="42660">
+      <class name="TEST_CASE.LoginTest">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:TEST_CASE.LoginTest@23348b5d]" started-at="2024-06-22T23:12:43 IST" name="openBrowser" finished-at="2024-06-22T23:13:22 IST" duration-ms="38532" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method signature="Login_With_Valid_Input([Ljava.lang.String;)[pri:0, instance:TEST_CASE.LoginTest@23348b5d]" started-at="2024-06-22T23:13:24 IST" name="Login_With_Valid_Input" data-provider="v" finished-at="2024-06-22T23:13:26 IST" duration-ms="2076" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@3bd6ba24]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login_With_Valid_Input -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TEST_CASE.LoginTest@23348b5d]" started-at="2024-06-22T23:13:26 IST" name="tearDown" finished-at="2024-06-22T23:13:26 IST" duration-ms="211" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- TEST_CASE.LoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
