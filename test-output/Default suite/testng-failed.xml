@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Selenium_Concepts.Selenium_Concepts_Demo">
+      <class name="TEST_CASE.LoginTest">
         <methods>
-          <include name="fileUpload"/>
+          <include name="tearDown"/>
+          <include name="Login_With_Valid_Input" invocation-numbers="0"/>
+          <include name="openBrowser"/>
         </methods>
-      </class> <!-- Selenium_Concepts.Selenium_Concepts_Demo -->
+      </class> <!-- TEST_CASE.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

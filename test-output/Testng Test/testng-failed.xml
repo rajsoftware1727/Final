@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="3" parallel="tests" name="Failed suite [Testng Test]" guice-stage="DEVELOPMENT">
-  <test thread-count="3" parallel="tests" name="cross browser testing-edge(failed)">
-    <parameter name="browser" value="edge"/>
+<suite name="Failed suite [Testng Test]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="UTILITIES.ActionListener"/>
+  </listeners>
+  <test thread-count="5" name="LoginTest(failed)">
     <classes>
       <class name="TEST_CASE.LoginTest">
         <methods>
@@ -12,17 +14,5 @@
         </methods>
       </class> <!-- TEST_CASE.LoginTest -->
     </classes>
-  </test> <!-- cross browser testing-edge(failed) -->
-  <test thread-count="3" parallel="tests" name="cross browser testing-firefox(failed)">
-    <parameter name="browser" value="firefox"/>
-    <classes>
-      <class name="TEST_CASE.LoginTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="Login_With_Valid_Input"/>
-          <include name="openBrowser"/>
-        </methods>
-      </class> <!-- TEST_CASE.LoginTest -->
-    </classes>
-  </test> <!-- cross browser testing-firefox(failed) -->
+  </test> <!-- LoginTest(failed) -->
 </suite> <!-- Failed suite [Testng Test] -->

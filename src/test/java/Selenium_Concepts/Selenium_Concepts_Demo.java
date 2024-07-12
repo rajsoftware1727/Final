@@ -6,10 +6,18 @@ import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 
+import javax.imageio.ImageIO;
+
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -19,6 +27,8 @@ import org.sikuli.script.Screen;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import ru.yandex.qatools.ashot.comparison.ImageDiff;
+import ru.yandex.qatools.ashot.comparison.ImageDiffer;
 
 public class Selenium_Concepts_Demo {
 	
@@ -89,6 +99,35 @@ public class Selenium_Concepts_Demo {
 
 
 		
+	}
+	
+	@Test
+	public void imageCompare() throws IOException
+	{
+		WebDriverManager.chromedriver().setup();
+		driver=new ChromeDriver();
+		driver.get("http://www.google.com");
+		WebElement t=driver.findElement(By.xpath("//img[@class='lnXdpd']"));
+		
+		File d=t.getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(d,new File("D:\\Images\\first.jpg"));
+		/*File f=new File("D:\\Images\\200.jpg");
+		File f1=new File("D:\\Images\\2000.jpg");
+
+		BufferedImage i1=ImageIO.read(f);
+		BufferedImage i2=ImageIO.read(f1);
+		
+		ImageDiffer differ=new ImageDiffer();
+		ImageDiff diff=differ.makeDiff(i1, i2);
+		if(diff.hasDiff())
+		{
+			System.out.println("images are different");
+		}
+		else
+		{
+			System.out.println("images are same");
+		}*/
+
 	}
 	
 	
